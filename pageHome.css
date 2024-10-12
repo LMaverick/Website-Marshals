@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+
+/*
+pra usar as fontes
+font-family: 'Kalnia', serif;
+font-family: 'Work Sans', sans-serif;
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+:root{
+    --cor1: #FFF;
+    --cor2: #E7E7E7;
+    --cor3: #292929;
+    --cor4: #010101;
+    --cor5: #E12300;
+    
+    --fonte1: "Bebas Neue", sans-serif;
+    --fonte2: 'Work Sans', sans-serif;
+   
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/* ============================= top =======================================*/
+#sec-top {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  background-image: url(imgs/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative; /* Importante para usar 'absolute' nos elementos internos */
+}
+
+#sec-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(41, 41, 41, 0.7); /* Overlay */
+}
+
+#top-logo {
+  position: absolute;
+  top: 7%; /* Posição da logo no topo */
+  right: 7%; /* Alinhamento à direita */
+  z-index: 2; /* Garante que a logo fique acima do overlay */
+}
+
+#top-logo > img {
+  max-height: 200px; /* Ajuste conforme necessário */
+  max-width: 200px;
+}
+
+#top-titulo,
+#top-titulo2,
+#top-btn {
+  position: absolute;
+  left: 10%; /* Alinhamento dos textos e botão à esquerda */
+  z-index: 2; /* Para ficar acima do overlay */
+  text-align: left;
+  color: var(--cor2); /* Cor definida no seu CSS */
+  font-family: var(--fonte1);
+}
+
+#top-titulo {
+  bottom: 170px; /* Posição do título principal */
+  font-size: 90px; /* Ajuste conforme necessário */
+  font-weight: 500;
+}
+
+#top-titulo2 {
+  bottom: 120px; /* Posição do subtítulo */
+  font-size: 30px;
+  font-weight: 200;
+}
+
+#top-btn {
+  bottom: 80px; /* Posição do botão */
+  background-color: var(--cor5);
+  color: var(--cor1);
+  padding: 3px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 200;
+  transition: background-color 0.7s ease;
+}
+
+#top-btn:hover {
+  background-color: var(--cor3);
+  color: var(--cor1);
+}
+
+
+
+/* =============================  =======================================*/
+#sec-mod1 {
+  display: grid;
+  grid-template-areas: 'titulo vid vid'
+                       'txt vid vid';
+  
+  background-color: var(--cor2);
+  padding: 50px 100px;
+
+  height: 100%;
+  width: 100vw;
+
+  position: relative; 
+  z-index: 2;
+
+  animation: fundoMix 20s infinite alternate;
+}
+
+@keyframes fundoMix {
+  0% {
+    background-color: rgb(193, 193, 193); 
+}
+25% {
+    background-color: rgba(231, 231, 231, 1); 
+}
+50% {
+    background-color: rgba(210, 210, 210, 0.8); 
+}
+75% {
+    background-color: rgba(231, 231, 231, 0.7); 
+}
+100% {
+    background-color: rgba(255, 255, 255, 0.6); 
+}
+}
+
+#mod1-titulo,
+#mod1-txt,
+#mod1-video {
+  position: relative;
+}
+
+#mod1-titulo {
+  grid-area: titulo;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 80px 80px 10px 10px;
+
+  font-family: var(--fonte1);
+  color: var(--cor3);
+  font-size: 70px;
+  font-weight: 400;
+}
+
+#mod1-txt {
+  grid-area: txt;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0px 80px 100px 10px;
+
+  font-family: var(--fonte2);
+  color: var(--cor3);
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#mod1-video {
+  grid-area: vid;
+  max-width: 900px;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 0px 200px 0px 100px;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  display: block;
+  object-fit: cover;
+}
+
+ 
+
+
+/* =============================  =======================================*/
+
+#sec-mod2{
+    display: grid;
+    grid-template-areas: 'titulo  titulo titulo '
+                         'room1 room2 room3'
+                         'room1 room2 room3';
+    
+    background-color: var(--cor1);
+    padding: 10px;
+    padding-bottom: 50px;
+  
+    height: 100%;
+    width: 100vw;
+
+    position: relative; 
+    z-index: 2;
+
+    place-items: center;
+
+  }
+
+  .mod2-carrossel{
+    max-width: 350px;
+    max-height: 250px;
+    padding: 10px;
+    margin-top: 0px;
+
+
+  }
+
+
+
+  #mod2-room1{
+    grid-area: room1;
+    padding-left: 100px;
+    padding-bottom: 100px;
+  }
+
+  #mod2-room2{
+    grid-area: room2;
+    padding-bottom: 100px;
+  }
+
+  #mod2-room3{
+    grid-area: room3;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
+
+
+  #mod2-img{
+    width: 350px; 
+    height: 250px; 
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden; 
+
+
+}
+#mod2-img  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+#mod2-img:hover img {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+#mod2-img:hover {
+    overflow: hidden; 
+}
+
+
+  .mod2-div{
+    margin-top: 10px;
+
+    padding: 5px;
+
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid var(--cor3);
+    text-align: center;
+    color: var(--cor3);
+    cursor: pointer;
+   
+  }
+
+  .mod2-div:hover {
+    background-color: var(--cor3);
+    transition: background-color 0.7s ease;
+    color: var(--cor1);
+}
+
+ #mod2-titulo{
+    grid-area: titulo;
+    text-align: center; 
+    padding-top: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    font-family: var(--fonte1);
+    color: var(--cor3);
+    font-size: 80px;
+    font-weight: 500;
+}
+
+#mod2-txt1 {
+    margin-bottom: 5px;
+    padding-top: 15px;
+}
+#mod2-txt2 {
+    font-weight: bold; 
+    margin: 10px 0;
+}
+#mod2-txt3 {
+    margin-top: 5px; 
+    padding-bottom: 15px;
+}
+
+
+
+
+/* =============================  =======================================*/
+
