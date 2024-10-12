@@ -332,7 +332,8 @@ html, body{
 #sec-mod3 {
   display: grid;
   grid-template-areas: 'vid titulo'
-                       'vid txt';
+                       'vid txt'
+                       'btn txt';
   
   background-color: var(--cor1);
   padding: 50px 100px;
@@ -382,7 +383,7 @@ html, body{
   max-width: 600px;
   max-height: 90vh;
   margin: 0 auto;
-  padding: 0px 50px 0px 00px; /* Ajusta padding do vídeo */
+  padding: 0px 50px 0px 0px; /* Ajusta padding do vídeo */
   
   background-position: center;
   background-repeat: no-repeat;
@@ -392,6 +393,110 @@ html, body{
   object-fit: cover;
 }
 
+.sound-button {
+  grid-area: btn;
+  max-width: 500px;
+  max-height: 90vh;
+  margin: 0 auto;
+  padding: 10px 50px 10px 50px;
+
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--cor3);
+  color: var(--cor1);
+  border: none;
+  border-radius: 5px;
+ 
+}
+
+
+
+/* =============================  =======================================*/
+
+#sec-mod4 {
+  display: grid;
+  grid-template-areas: 'titulo titulo titulo'
+                       'txt img img';
+
+  background-color: var(--cor3); /* Anteriormente cor2 */
+  padding: 50px 100px;
+
+  height: 100%;
+  width: 100vw;
+
+  position: relative; 
+  z-index: 2;
+}
+
+#mod4-titulo,
+#mod4-txt,
+#mod4-img {
+  position: relative; 
+}  
+
+#mod4-titulo {
+  grid-area: titulo;
+
+  margin: 0 auto;
+  text-align: justify;
+  padding: 80px 80px 10px 10px;
+
+  font-family: var(--fonte1);
+  color: var(--cor1); /* Anteriormente cor3 */
+  font-size: 50px;
+  font-weight: 400;
+}
+
+#mod4-txt {
+  grid-area: txt;
+
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0px 80px 100px 10px;
+
+  font-family: var(--fonte2);
+  color: var(--cor1); /* Anteriormente cor3 */
+  font-size: 24px;
+  font-weight: 300;
+}
+
+
+
+
+
+#mod4-img{
+  grid-area: img;
+  max-width: 900px;
+    max-height: 550px; 
+    margin: 0px 25vh 0px 0px;
+
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden; 
+} 
+
+
+#mod4-img  img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+#mod4-img:hover img {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+#mod4-img:hover {
+  overflow: hidden; 
+}
 
 
 /* =============================  =======================================*/

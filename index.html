@@ -22,7 +22,7 @@
 
     </section>
 
-
+<!-- ================================================ -->
 
     <section id="sec-mod1">
         <h1 class="mod1" id="mod1-titulo">Bem vindo ao Help Track da Marshals</h1>
@@ -36,7 +36,7 @@
     </section>
 
     
-    
+ <!-- ================================================ -->   
 
     <section id="sec-mod2">
         <h1 id="mod2-titulo">Diferenciais</h1>
@@ -72,7 +72,7 @@
         </div>
 
     </section>
-
+<!-- ================================================ -->
 
     <section id="sec-mod3">
         <video class="mod3" id="mod3-video" autoplay muted loop>
@@ -80,11 +80,41 @@
             Seu navegador não suporta o vídeo.
         </video>
     
-        <h1 class="mod3" id="mod3-titulo">Bem vindo ao Help Track da Marshals</h1>
+        <button id="toggle-sound" class="sound-button">Veja a Apresentação</button>
     
+        <h1 class="mod3" id="mod3-titulo">Texto de apresentação do produto mais detalhado</h1>
+        
         <p class="mod3" id="mod3-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eos ex deserunt necessitatibus ab rem ipsum. Sit, corporis neque quia possimus voluptates quibusdam atque voluptatem tempore illo. Doloribus, minus expedita?</p>
     </section>
+
     
+<script>
+     const video = document.getElementById('mod3-video');
+    const toggleSoundButton = document.getElementById('toggle-sound');
+
+    // Começa o vídeo pausado
+    video.pause();
+
+    toggleSoundButton.addEventListener('click', () => {
+        video.muted = !video.muted; // Alterna o estado de mudo do vídeo
+        if (!video.muted) {
+            video.play(); // Reproduz o vídeo se o som estiver ativado
+        } else {
+            video.pause(); // Pausa o vídeo se o som estiver desativado
+        }
+        toggleSoundButton.textContent = video.muted ? 'Veja a Apresentação' : 'Pausar'; // Atualiza o texto do botão
+    });
+</script>
+    
+
+<section id="sec-mod4">
+    <h1 class="mod4" id="mod4-titulo">Marshals uma empresa de confiança</h1>
+
+    <p class="mod4" id="mod4-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eos ex deserunt necessitatibus ab rem ipsum. Sit, corporis neque quia possimus voluptates quibusdam atque voluptatem tempore illo. Doloribus, minus expedita?</p>
+
+    <div id="mod4-img"><img src="imgs/pessoas.jpg" alt="" ></div>
+</section>
+
 
 
 
