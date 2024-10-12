@@ -9,7 +9,6 @@ body { height: 100vh; display: flex; justify-content: center; align-items: cente
   height: 100%;
   background: url('https://marshalsseg.com.br/wp-content/uploads/2024/03/white-grunge-wall-textured-background-1.jpg') no-repeat center center;
   background-size: cover;
-  filter: invert(1);
   z-index: 1;
 }
 
@@ -77,5 +76,4 @@ button:hover { background-color: #000; }
   border-radius: 5px;
   font-size: 1em;
 }
-
 
