@@ -1,0 +1,81 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { height: 100vh; display: flex; justify-content: center; align-items: center; background: none; position: relative; }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://marshalsseg.com.br/wp-content/uploads/2024/03/white-grunge-wall-textured-background-1.jpg') no-repeat center center;
+  background-size: cover;
+  filter: invert(1);
+  z-index: 1;
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.logo-container img {
+  width: 100px;
+  height: auto;
+}
+
+.content { 
+  width: 70%; 
+  background-color: #222; 
+  padding: 30px; 
+  text-align: center; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  color: #fff; 
+  position: relative; 
+  z-index: 3; 
+  transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+h1 { font-size: 2.5rem; color: #fff; margin-bottom: 20px; }
+p { font-size: 1.2rem; color: #fff; margin-bottom: 20px; }
+
+button { padding: 10px 20px; font-size: 1rem; background-color: #d9534f; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.6s ease; }
+button:hover { background-color: #000; }
+
+.form { 
+  display: none; 
+  flex-direction: column; 
+  margin-top: 20px; 
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: all 0.8s ease-in-out; 
+  z-index: 3;
+}
+.form.show { 
+  display: flex; 
+  opacity: 1; 
+  transform: translateY(0); 
+  transition: all 0.8s ease-in-out; 
+}
+
+.hideDisplay { display: none; }
+
+.content.hide {
+  opacity: 0; 
+  pointer-events: none; 
+  transform: translateY(-50px); 
+  transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+

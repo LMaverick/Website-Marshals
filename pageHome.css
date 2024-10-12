@@ -501,3 +501,85 @@ html, body{
 
 /* =============================  =======================================*/
 
+
+#sec-mod-fin {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  background-image: url(imgs/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative; /* Importante para usar 'absolute' nos elementos internos */
+}
+
+#sec-mod-fin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(41, 41, 41, 0.7); /* Overlay */
+}
+
+#fin-logo {
+  position: absolute;
+  top: 7%; /* Posição da logo no topo */
+  right: 7%; /* Alinhamento à direita */
+  z-index: 2; /* Garante que a logo fique acima do overlay */
+}
+
+#fin-logo > img {
+  max-height: 200px; /* Ajuste conforme necessário */
+  max-width: 200px;
+}
+
+#fin-titulo,
+#fin-titulo2,
+#fin-btn {
+  position: absolute;
+  left: 10%; /* Alinhamento dos textos e botão à esquerda */
+  z-index: 2; /* Para ficar acima do overlay */
+  text-align: left;
+  color: var(--cor2); /* Cor definida no seu CSS */
+  font-family: var(--fonte1);
+}
+
+#fin-titulo {
+  bottom: 170px; /* Posição do título principal */
+  font-size: 90px; /* Ajuste conforme necessário */
+  font-weight: 500;
+}
+
+#fin-titulo2 {
+  bottom: 120px; /* Posição do subtítulo */
+  font-size: 30px;
+  font-weight: 200;
+}
+
+#fin-btn {
+  bottom: 80px; /* Posição do botão */
+  background-color: var(--cor5);
+  color: var(--cor1);
+  padding: 3px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 200;
+  transition: background-color 0.7s ease;
+}
+
+#fin-btn:hover {
+  background-color: var(--cor3);
+  color: var(--cor1);
+}
+
+
+
+
+/* =============================  =======================================*/
+

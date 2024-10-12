@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atenção - Formulário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Logotipo que direciona para o site da Marshals -->
+  <div class="logo-container">
+    <a href="https://marshalsseg.com.br/">
+      <img src="https://marshalsseg.com.br/wp-content/uploads/2024/03/logotipo.png" alt="Logo Marshals">
+    </a>
+  </div>
+
+  <div class="background"></div>
+
+  <div class="content" id="content">
+    <h1>Atenção</h1>
+    <p>Para você adquirir o produto, você deve deixar seus dados para ser avaliado.</p>
+    <button id="entendi-btn">Entendi</button>
+  </div>
+
+  <div class="content hide hideDisplay" id="content-form">
+    <h1>Insira seus dados</h1>
+    <div class="form" id="form">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="text" id="cpf" placeholder="CPF" required>
+      <input type="date" id="dataNascimento" placeholder="Data de Nascimento" onclick="autoPreencherData()" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <button id="salvar-btn">Salvar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
