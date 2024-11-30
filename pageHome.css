@@ -163,7 +163,7 @@ html, body{
 
   font-family: var(--fonte1);
   color: var(--cor3);
-  font-size: 70px;
+  font-size: 90px;
   font-weight: 400;
 }
 
@@ -220,81 +220,75 @@ html, body{
   }
 
   .mod2-carrossel{
-    max-width: 500px;
-    max-height: 350px;
+    width: 400px;
+    height: 350px;
     padding: 10px;
     margin-top: 0px;
 
-
-  }
-
-
-
-  #mod2-ap1{
-    grid-area: ap1;
-    padding-left: 100px;
-    padding-bottom: 100px;
-  }
-
-  #mod2-ap2{
-    grid-area: ap2;
-    padding-bottom: 100px;
-  }
-
-  #mod2-ap3{
-    grid-area: ap3;
-    padding-right: 100px;
-    padding-bottom: 100px;
-  }
-
-
-  #mod2-img{
-    max-width: 500px;
-    max-height: 250px; 
-    margin: 0 auto;
-
     display: flex;
-    align-items: center;
     justify-content: center;
+    position: relative;
 
-    overflow: hidden; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease-out;
+  }
+
+  .mod2-carrossel:hover{
+    height: 450px;
+  }
+
+.mod2-carrossel .mod2-img{
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 0;
+  transition: 0.5s ease;
+
+}
+
+.mod2-carrossel:hover .mod2-img{
+  top:-100px;
+  scale: 0.7;
+}
+
+.mod2-carrossel .mod2-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
 
 
-}
-#mod2-img  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.7s ease;
-}
-#mod2-img:hover img {
-    transform: scale(1.2);
-    transform-origin: center;
-}
-#mod2-img:hover {
-    overflow: hidden; 
-}
 
 
   .mod2-div{
+    display:flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 250px;
+
     margin-top: 10px;
 
     padding: 5px;
 
     max-width: 100%;
-    max-height: 100%;
-    border: 2px solid var(--cor1);
+    height: 30px;
     text-align: center;
-    color: var(--cor1);
+    color: var(--cor4);
     cursor: pointer;
-   
+
+    overflow: hidden;
+    transition:  0.6s ease;
   }
 
-  .mod2-div:hover {
-    background-color: var(--cor1);
-    transition: background-color 0.7s ease;
-    color: var(--cor3);
+.mod2-carrossel:hover .mod2-div{
+  top:130px;
+  height: 250px;
 }
+
 
  #mod2-titulo{
     grid-area: titulo;
@@ -305,8 +299,8 @@ html, body{
 
     font-family: var(--fonte1);
     color: var(--cor1);
-    font-size: 80px;
-    font-weight: 500;
+    font-size: 120px;
+    font-weight: 700;
 }
 
 #mod2-txt1 {
@@ -362,8 +356,8 @@ html, body{
 
   font-family: var(--fonte1);
   color: var(--cor3);
-  font-size: 70px;
-  font-weight: 400;
+  font-size: 110px;
+  font-weight: 500;
 }
 
 #mod3-txt {
@@ -380,9 +374,9 @@ html, body{
 
 #mod3-video {
   grid-area: vid;
-  max-width: 600px;
-  max-height: 90vh;
-  margin: 0 auto;
+  max-width: 900px;
+  max-height: 100vh;
+  margin: 0;
   padding: 0px 50px 0px 0px; /* Ajusta padding do vídeo */
   
   background-position: center;
@@ -395,12 +389,12 @@ html, body{
 
 .sound-button {
   grid-area: btn;
-  max-width: 500px;
-  max-height: 90vh;
+  max-width: auto;
+  max-height: auto;
   margin: 0 auto;
   padding: 10px 50px 10px 50px;
 
-  font-size: 16px;
+  font-size: 24px;
   cursor: pointer;
   background-color: var(--cor3);
   color: var(--cor1);
@@ -443,8 +437,8 @@ html, body{
 
   font-family: var(--fonte1);
   color: var(--cor1); /* Anteriormente cor3 */
-  font-size: 50px;
-  font-weight: 400;
+  font-size: 130px;
+  font-weight: 700;
 }
 
 #mod4-txt {
@@ -456,7 +450,7 @@ html, body{
 
   font-family: var(--fonte2);
   color: var(--cor1); /* Anteriormente cor3 */
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 300;
 }
 
