@@ -250,7 +250,7 @@ html, body{
 
 .mod2-carrossel:hover .mod2-img{
   top:-100px;
-  scale: 0.7;
+  scale: 1.1;
 }
 
 .mod2-carrossel .mod2-img img{
