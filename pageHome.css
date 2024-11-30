@@ -80,6 +80,8 @@ html, body{
   text-align: left;
   color: var(--cor2); /* Cor definida no seu CSS */
   font-family: var(--fonte1);
+
+
 }
 
 #top-titulo {
@@ -244,28 +246,28 @@ html, body{
     0%{
       transform: rotate(0deg);
     }
-    8%{
+    86%{
       transform: rotate(0deg);
     }
-    10%{
+    88%{
       transform: rotate(3deg);
     }
-    12%{
+    90%{
       transform: rotate(-3deg);
     }
-    14%{
+    92%{
       transform: rotate(3deg);
     }
-    16%{
+    94%{
       transform: rotate(-3deg);
     }
-    18%{
+    96%{
       transform: rotate(3deg);
     }
-    20%{
+    98%{
       transform: rotate(-3deg);
     }
-    22%{
+    100%{
       transform: rotate(0deg);
     }
 
@@ -408,7 +410,7 @@ html, body{
 #mod3-txt {
   grid-area: txt;
   margin: 0px 0px 10px 0px;
-  text-align: left; /* Texto alinhado à esquerda */
+  text-align: justify; /* Texto alinhado à esquerda */
   padding: 0px 25vh 0px 80px; /* Ajusta padding para o alinhamento correto */
 
   font-family: var(--fonte2);
@@ -623,4 +625,19 @@ html, body{
 
 
 /* =============================  =======================================*/
+
+.hidden{
+  opacity: 0;
+  filter:blur(10px);
+
+  transform:  translateX(-100%);
+  transition: all 1s ease-in;
+}
+
+.show{
+  opacity: 1;
+  filter:blur(0px);
+  transform:  translateX(0%);
+  transition: all 1s ;
+}
 
