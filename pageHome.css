@@ -641,3 +641,356 @@ html, body{
   transition: all 1s ;
 }
 
+
+/* =================== RESPONSIVIDADE ===========================
+
+/* ============================= RESPONSIVIDADE ============================= */
+/* ============================= RESPONSIVIDADE SEC-MOD1 ============================= */
+
+/* TABLETS e telas médias (até 1024px) */
+@media (max-width: 1024px) {
+  #sec-mod1 {
+    grid-template-areas:
+      'titulo titulo'
+      'vid vid'
+      'vid vid'
+      'txt txt';
+
+    padding: 0px 5px;
+    height: 200%;
+    width: 100vw;
+  }
+
+  #mod1-titulo {
+    font-size: 60px;
+    padding: 40px 20px 10px 10px;
+    text-align: center;
+  }
+
+  #mod1-txt {
+    font-size: 24px;
+    padding: 10px 20px 40px 10px;
+    text-align: justify;
+  }
+
+  #mod1-video {
+    padding: 0px 40px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* CELULARES e telas pequenas (até 600px) */
+@media (max-width: 600px) {
+  #sec-mod1 {
+    grid-template-areas:
+      'titulo'
+      'vid'
+      'vid'
+      'txt';
+
+    padding: 0px 2px;
+  }
+
+  #mod1-titulo {
+    font-size: 40px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  #mod1-txt {
+    font-size: 18px;
+    padding: 10px;
+    text-align: justify;
+  }
+
+  #mod1-video {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+/* ======================= RESPONSIVIDADE SEC-MOD2 ======================= */
+
+/* TABLETS até 1024px */
+@media (max-width: 1024px) {
+  #sec-mod2 {
+    grid-template-areas:
+      'titulo titulo'
+      'ap1 ap1'
+      'ap2 ap2'
+      'ap3 ap3';
+
+    padding: 40px 30px;
+  }
+
+  #mod2-titulo {
+    font-size: 70px;
+    padding-top: 60px;
+  }
+
+  .mod2-carrossel {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .mod2-carrossel:hover {
+    height: 420px;
+  }
+
+  .mod2-carrossel .mod2-img {
+    width: 300px;
+  }
+
+  .mod2-carrossel:hover .mod2-img {
+    top: -80px;
+    scale: 0.85;
+  }
+
+  .mod2-div {
+    top: 250px;
+  }
+
+  .mod2-carrossel:hover .mod2-div {
+    top: 160px;
+    height: 350px;
+  }
+
+  #mod2-txt1 {
+    font-size: 18px;
+  }
+
+  #mod2-txt2 {
+    font-size: 22px;
+  }
+
+  #mod2-txt3 {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+
+/* CELULARES até 600px */
+@media (max-width: 600px) {
+  #sec-mod2 {
+    grid-template-areas:
+      'titulo'
+      'ap1'
+      'ap2'
+      'ap3';
+      margin-top: 120px;
+    height: 200%;
+    width: 100vw;
+    padding: 10px 5px;
+    place-items: center;
+  }
+
+  #mod2-titulo {
+    font-size: 45px;
+    padding-top: 40px;
+  }
+
+  .mod2-carrossel {
+    width: 90%;
+    height: 260px;
+  }
+
+  .mod2-carrossel:hover {
+    height: 380px;
+  }
+
+  .mod2-carrossel .mod2-img {
+    width: 100%;
+  }
+
+  .mod2-carrossel:hover .mod2-img {
+    top: -60px;
+    scale: 0.9;
+  }
+
+  .mod2-div {
+    top: 220px;
+  }
+
+  .mod2-carrossel:hover .mod2-div {
+    top: 150px;
+    height: 320px;
+  }
+
+  #mod2-txt1 {
+    font-size: 16px;
+  }
+
+  #mod2-txt2 {
+    font-size: 20px;
+  }
+
+  #mod2-txt3 {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+
+/* ======================= RESPONSIVIDADE SEC-MOD3 ======================= */
+
+/* TABLETS até 1024px */
+@media (max-width: 1024px) {
+  #sec-mod3 {
+    grid-template-areas:
+      'titulo titulo'
+      'txt txt'
+      'vid vid'
+      'btn btn';
+    height: 200%;
+    width: 100vw;
+    padding: 0px 5px;
+    place-items: center;
+  }
+
+  #mod3-titulo {
+    font-size: 60px;
+    padding: 30px 20px 10px 20px;
+    text-align: center;
+  }
+
+  #mod3-txt {
+    font-size: 22px;
+    padding: 10px 20px 30px 20px;
+    text-align: justify;
+  }
+
+  #mod3-video {
+    padding: 0;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .sound-button {
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+  }
+}
+
+
+/* CELULARES até 600px */
+@media (min-width: 600px) {
+  #sec-mod3 {
+    grid-template-areas:
+      'titulo'
+      'txt'
+      'vid'
+      'btn';
+      height: 120%;
+    width: 100vw;
+    padding: 0px 5px;
+    place-items: center;
+  }
+
+  #mod3-titulo {
+    font-size: 38px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+  }
+
+  #mod3-txt {
+    font-size: 18px;
+    padding: 10px 10px 20px 10px;
+    text-align: justify;
+     
+  }
+
+  #mod3-video {
+    padding: 5px;
+    width: 80%;
+    max-width: 100%;
+        
+  }
+
+  .sound-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+  }
+}
+
+
+
+
+/* ======================= RESPONSIVIDADE SEC-MOD4 ======================= */
+
+/* TABLETS até 1024px */
+@media (max-width: 1024px) {
+  #sec-mod4 {
+    grid-template-areas:
+      'titulo titulo'
+      'txt txt'
+      'img img';
+      height: 200%;
+    width: 100vw;
+    padding: 0px 5px;
+    place-items: center;
+  }
+
+  #mod4-titulo {
+    font-size: 60px;
+    padding: 30px 20px 10px 20px;
+    text-align: center;
+  }
+
+  #mod4-txt {
+    font-size: 22px;
+    padding: 10px 20px 30px 20px;
+    text-align: justify;
+  }
+
+  #mod4-img {
+    width: 90%;
+    max-width: 700px;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+
+/* CELULARES até 600px */
+@media (max-width: 600px) {
+  #sec-mod4 {
+    grid-template-areas:
+      'titulo titulo'
+      'txt txt'
+      'img img';
+      height: 120%;
+    width: 100vw;
+    padding: 0px 5px;
+    place-items: center;
+  }
+
+  #mod4-titulo {
+    font-size: 38px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+  }
+
+  #mod4-txt {
+    font-size: 18px;
+    padding: 10px 10px 20px 10px;
+    text-align: justify;
+  }
+
+  #mod4-img {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
