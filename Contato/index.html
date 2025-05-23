@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atenção - Formulário</title>
+  <link rel="stylesheet" href="/Contato/styles.css">
+</head>
+<body>
+  <div class="logo-container">
+    <a href="https://marshalsseg.com.br/">
+      <img src="https://marshalsseg.com.br/wp-content/uploads/2024/03/logotipo.png" alt="Logo Marshals" />
+    </a>
+  </div>
+
+  <div class="background"></div>
+
+  <div class="content" id="content">
+    <h1>Atenção</h1>
+    <p>Para você adquirir o produto, você deve deixar seus dados para ser avaliado.</p>
+    <button id="entendi-btn">Entendi</button>
+  </div>
+  <script src="https://unpkg.com/imask"></script>
+
+
+  <div class="content hide hideDisplay" id="content-form">
+    <h1>Insira seus dados</h1>
+    <div class="form" id="form">
+      <input type="text" id="nome" placeholder="Nome" />
+      <input type="text" id="cpf" name="cpf" placeholder="Cpf" maxlength="14">
+
+      <input type="date" id="dataNascimento" placeholder="Data de Nascimento" />
+      <input type="email" id="email" placeholder="Email" />
+      <button id="salvar-btn">Salvar</button>
+      <div id="status" style="display:none; margin-top:20px; text-align:center;">
+    <img src="https://i.imgur.com/llF5iyg.gif" alt="Carregando" style="width:50px;">
+    <p style="color:white;">Enviando dados...  Aguarde</p>
+</div>
+
+<div id="mensagem" style="display:none; margin-top:10px; text-align:center; color:lime;"></div>
+
+    </div>
+  </div>
+
+  <script src="/Contato/script.js"></script>
+</body>
+</html>

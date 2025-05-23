@@ -1,0 +1,17 @@
+CRIAÇÃO BANCO DE DADOS
+
+
+CREATE DATABASE IF NOT EXISTS marshals DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+USE marshals;
+
+ Criação da tabela para armazenar os dados do formulário
+CREATE TABLE IF NOT EXISTS clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(20) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
