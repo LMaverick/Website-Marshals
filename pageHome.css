@@ -277,7 +277,7 @@ html, body{
   }
 
   .mod2-carrossel:hover{
-    height: 480px;
+    height: 580px;
     animation: shake 0s;
   }
 
@@ -644,12 +644,12 @@ html, body{
 
 /* =================== RESPONSIVIDADE ===========================
 
-/* ============================= RESPONSIVIDADE ============================= */
-/* ============================= RESPONSIVIDADE SEC-MOD1 ============================= */
+============================= RESPONSIVIDADE SEC-MOD1 ============================= */
 
 /* TABLETS e telas médias (até 1024px) */
 @media (max-width: 1024px) {
   #sec-mod1 {
+    display: grid;
     grid-template-areas:
       'titulo titulo'
       'vid vid'
@@ -657,20 +657,29 @@ html, body{
       'txt txt';
 
     padding: 0px 5px;
-    height: 200%;
+    height: auto;
     width: 100vw;
   }
 
+  #mod1-titulo,
+#mod1-txt,
+#mod1-video {
+  position: relative;
+}
+
   #mod1-titulo {
+      margin: 0 auto;
     font-size: 60px;
     padding: 40px 20px 10px 10px;
-    text-align: center;
+    text-align: left;
+ 
   }
 
   #mod1-txt {
     font-size: 24px;
     padding: 10px 20px 40px 10px;
-    text-align: justify;
+    text-align: left;
+ 
   }
 
   #mod1-video {
@@ -684,49 +693,65 @@ html, body{
 @media (max-width: 600px) {
   #sec-mod1 {
     grid-template-areas:
-      'titulo'
-      'vid'
-      'vid'
-      'txt';
-
-    padding: 0px 2px;
+      'titulo' 'titulo'
+      'vid' 'vid'
+      'txt' 'txt';
+    height: auto;
+    width: 100vw;
+    padding: 0px 0px;
+    margin: 0 auto;
   }
 
   #mod1-titulo {
+    grid-area: titulo;
     font-size: 40px;
-    padding: 20px 10px;
+    padding: 40px 20px 10px 10px;
     text-align: center;
+
   }
 
   #mod1-txt {
     font-size: 18px;
-    padding: 10px;
+    padding: 40px;
     text-align: justify;
-  }
+    
 
+  }
   #mod1-video {
-    padding: 0;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+    grid-area: vid;
+  max-width: 900px;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 0px 10px 0px 10px;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  display: block;
+  object-fit: cover;
+
+  
   }
 }
 
 
 
-
 /* ======================= RESPONSIVIDADE SEC-MOD2 ======================= */
+
+/* ======================= RESPONSIVIDADE SEC-MOD2 COMO DIVS NORMAIS ======================= */
 
 /* TABLETS até 1024px */
 @media (max-width: 1024px) {
   #sec-mod2 {
     grid-template-areas:
-      'titulo titulo'
-      'ap1 ap1'
-      'ap2 ap2'
-      'ap3 ap3';
+      'titulo'
+      'ap1'
+      'ap2'
+      'ap3';
 
     padding: 40px 30px;
+    animation: none;
   }
 
   #mod2-titulo {
@@ -736,30 +761,38 @@ html, body{
 
   .mod2-carrossel {
     width: 300px;
-    height: 300px;
+    height: auto;
     margin-top: 20px;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 200;
 
-  .mod2-carrossel:hover {
-    height: 420px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    animation: none;
   }
 
   .mod2-carrossel .mod2-img {
-    width: 300px;
-  }
-
-  .mod2-carrossel:hover .mod2-img {
-    top: -80px;
-    scale: 0.85;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    scale: 1;
+    transition: none;
   }
 
   .mod2-div {
-    top: 250px;
-  }
-
-  .mod2-carrossel:hover .mod2-div {
-    top: 160px;
-    height: 350px;
+    position: relative;
+    top: 0;
+    height: auto;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    color: var(--cor4);
+    overflow: hidden;
+    transition: none;
   }
 
   #mod2-txt1 {
@@ -785,11 +818,16 @@ html, body{
       'ap1'
       'ap2'
       'ap3';
-      margin-top: 120px;
-    height: 200%;
+    
+    background-color: var(--cor2);
+    padding: 10px;
+    padding-bottom: 50px;
+    height: auto;
     width: 100vw;
-    padding: 10px 5px;
+    position: relative; 
+    z-index: 2;
     place-items: center;
+    animation: fundoMix2 10s infinite alternate ease;
   }
 
   #mod2-titulo {
@@ -799,29 +837,37 @@ html, body{
 
   .mod2-carrossel {
     width: 90%;
-    height: 260px;
-  }
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .mod2-carrossel:hover {
-    height: 380px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    animation: none;
   }
 
   .mod2-carrossel .mod2-img {
     width: 100%;
-  }
-
-  .mod2-carrossel:hover .mod2-img {
-    top: -60px;
-    scale: 0.9;
+    height: auto;
+    position: relative;
+    top: 0;
+    scale: 1;
+    transition: none;
   }
 
   .mod2-div {
-    top: 220px;
-  }
-
-  .mod2-carrossel:hover .mod2-div {
-    top: 150px;
-    height: 320px;
+    position: relative;
+    top: 0;
+    height: auto;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    color: var(--cor4);
+    overflow: hidden;
+    transition: none;
   }
 
   #mod2-txt1 {
@@ -837,6 +883,7 @@ html, body{
     padding: 6px 12px;
   }
 }
+
 
 
 /* ======================= RESPONSIVIDADE SEC-MOD3 ======================= */
@@ -882,14 +929,15 @@ html, body{
 
 
 /* CELULARES até 600px */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   #sec-mod3 {
     grid-template-areas:
       'titulo'
       'txt'
       'vid'
+      'vid'
       'btn';
-      height: 120%;
+      height: 190%;
     width: 100vw;
     padding: 0px 5px;
     place-items: center;
@@ -903,7 +951,7 @@ html, body{
 
   #mod3-txt {
     font-size: 18px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 40px 30px 40px;
     text-align: justify;
      
   }
@@ -919,6 +967,7 @@ html, body{
     font-size: 18px;
     padding: 10px 20px;
     margin-top: 20px;
+    margin-bottom: 1100px;
 
   }
 }
@@ -949,7 +998,7 @@ html, body{
 
   #mod4-txt {
     font-size: 22px;
-    padding: 10px 20px 30px 20px;
+    padding: 10px 30px 30px 20px;
     text-align: justify;
   }
 
@@ -983,7 +1032,7 @@ html, body{
 
   #mod4-txt {
     font-size: 18px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 30px 30px 30px;
     text-align: justify;
   }
 
